@@ -6,14 +6,13 @@ public class Main {
 
         int salary = 15000;
         int total = 0;
-        int i = 1;
-        for (; total < 2_459_000; i++) {
+        int i = 0;
+        while (total < 2_459_000) {
+            total = total + total / 100;
             total = total + salary;
-            if (i < total) {
-                System.out.println("Месяц " + i + " Сумма накоплений равна " + total);
-            }
+            i++;
+            System.out.println("Месяц " + i + " Сумма накоплений равна " + total);
         }
-        System.out.println("Общая сумма " + total);
 
         System.out.println("Задание 2");
 
@@ -44,43 +43,40 @@ public class Main {
 
         System.out.println("Задание 4");
 
-
-        int salary2 = 15000;
-        int total2 = 15000;
-        int i2 = 0;
-        for (; total2 <= 12_000_000; i2++) {
-            total2 = total2 + total2 / 100 * 7;
-            total2 = total2 + salary2;
-            if (i2 % 1 == 0) {
-                System.out.println("Месяц " + i2 + " Итого " + total2);
-            }
+        int deposit = 15000;
+        int target = 12_000_000;
+        int b = 0;
+        while (deposit < target) {
+            deposit = deposit + deposit / 100 * 7;
+            deposit = deposit + salary;
+            b++;
+            System.out.println("Месяц " + b + " Итого " + deposit);
         }
 
         System.out.println("Задание 5");
 
-        int salary3 = 15000;
-        int total3 = 15000;
-        int i3 = 0;
-        for (; total3 <= 12_000_000; i3++) {
+        int monthlyСontribution = 15000;
+        int piggyBank = 15000;
+        int a = 0;
+        for (; piggyBank <= 12_000_000; a++) {
 
-            total3 = total3 + total3 / 100 * 7;
-            total3 = total3 + salary3;
-            if (i3 % 6 == 0 && i3 > 0) {
-
-                System.out.println( "Месяц " + i3 + " сумма накоплений " +total3);
+            piggyBank = piggyBank + piggyBank / 100 * 7;
+            piggyBank = piggyBank + monthlyСontribution;
+            if (a % 6 == 0 && a > 0) {
+                System.out.println( "Месяц " + a + " сумма накоплений " +piggyBank);
             }
         }
 
         System.out.println("Задание 6");
 
-        int salary4 = 15000;
-        int total4 = 0;
+        int everyMonthContribution = 15000;
+        int bank = 0;
         int allmonth = 9 * 12;
         for (int month = 1; month <= allmonth; month++) {
-            total4 = total4 + total4 / 100 * 7;
-            total4 = total4 + salary4;
+            bank = bank + bank / 100 * 7;
+            bank = bank + salary;
             if (month % 6 == 0) {
-                System.out.println(  month + " Месяц. Общая сумма накоплений (с учётом процентов) " + total4);
+                System.out.println(  month + " Месяц. Общая сумма накоплений (с учётом процентов) " + bank);
             }
         }
 
